@@ -1,7 +1,9 @@
 package simpledogsio;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -26,6 +28,10 @@ public class client {
 				System.out.println(line);
 			}
 		}
+		public static void DogToHml(String dogString, String dest) throws FileNotFoundException {
+
+		}
+
 	}
 	
 }
