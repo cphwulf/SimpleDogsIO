@@ -18,7 +18,6 @@ public class ImportDogsFromFile {
 	*/
 	public static void importDogsFromCSV(String filename) throws FileNotFoundException {
 		String filenameOut = "Data/output.sql";
-		//String sqlLine = "INSERT INTO DOG (DogID, Name,Gender,Color,Race,CityOrigin,Mother,Father) ";
 		String sqlLine = "INSERT INTO DOGS (DogID,Color,Breed,DogName,Gender,CityOrigin) ";
 		sqlLine += " VALUES(%d,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\")";
 		String line = "";
