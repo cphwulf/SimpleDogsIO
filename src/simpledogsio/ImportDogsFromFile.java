@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package simpledogsio;
 
 import java.io.File;
@@ -14,19 +9,15 @@ import java.util.Scanner;
  * @author thor
  */
 public class ImportDogsFromFile {
-	//Red,Dobermann,AMY,Desexed Female,WATERLOO CORNER
-	// Dog(String name, String gender, String color, String race, String cityOrigin)
-	public static void importDogsFromCSV(String filename, DogCompound myCompound) throws FileNotFoundException {
-		String line = "";
-		File fh = new File(filename);
-		Scanner myScanner = new Scanner(fh);
-		while (myScanner.hasNextLine()) {
-			line = myScanner.nextLine();
-			String[] myArr = line.split(",");
-			Dog tmpDog = new Dog(myArr[3], myArr[4], myArr[1], myArr[2], myArr[5]);
-			myCompound.addDog(tmpDog);
+	// Dog(String name, String color, String breed, String dogname, String gender, String cityOrigin, int Mother, int Father)
+	/*
+	25703,Grey/Tan,Dobermann,E T,Desexed Male,WATERLOO CORNER,NULL,NULL
+	26898,Blenheim,Spaniel,SAMO,Male,HILLIER,26901,26899
+	26899,Blenheim,Spaniel,ANDY,Male,HILLIER,NULL,NULL
+	26901,Blenheim,Spaniel,CORKY,Female,HILLIER,NULL,NULL
+	*/
+	public static void importDogsFromCSV(String filename) throws FileNotFoundException {
 		}
-			
+		
 	}
-	
 }

@@ -11,25 +11,46 @@ package simpledogsio;
  */
 public class Dog {
 //20990,Red,Dobermann,AMY,Desexed Female,WATERLOO CORNER
-	String name;
+	int id;
+	int motherID;
+	int fatherID;
+	String dogname;
 	String gender;
 	String color;
-	String race;
+	String breed;
 	String cityOrigin;
 
-	public Dog(String name, String gender, String color, String race, String cityOrigin) {
-		this.name = name;
+	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {
+		this.id = id;
+		this.dogname = dogname;
 		this.gender = gender;
 		this.color = color;
-		this.race = race;
+		this.breed = breed;
 		this.cityOrigin = cityOrigin;
 	}
+
+	public int getMotherID() {
+		return motherID;
+	}
+
+	public void setMotherID(int motherID) {
+		this.motherID = motherID;
+	}
+
+	public int getFatherID() {
+		return fatherID;
+	}
+
+	public void setFatherID(int fatherID) {
+		this.fatherID = fatherID;
+	}
+	
 
 	@Override
 	public String toString() {
 		String msg = "";
-		msg += "NAME: " + this.name;
-		msg += "RACE: " + this.race;
+		msg += "NAME: " + this.dogname;
+		msg += "RACE: " + this.breed;
 		msg += "GENDER: " + this.gender;
 		msg += "COLOR: " + this.color;
 		msg += "TOWN: " + this.cityOrigin;
@@ -39,7 +60,7 @@ public class Dog {
 	}
 
 	public String getName() {
-		return this.name;
+		return this.dogname;
 
 	}
 	
