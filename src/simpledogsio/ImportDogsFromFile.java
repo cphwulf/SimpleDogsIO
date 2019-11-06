@@ -23,8 +23,8 @@ public class ImportDogsFromFile {
 		String line = "";
 		File fh = new File(filename);
 		File fhout = new File(filenameOut);
-
 		Scanner myScanner = new Scanner(fh);
+		myScanner.nextLine();
 		while (myScanner.hasNextLine()) {
 			line = myScanner.nextLine();
 			String[] myArr = line.split(",");
