@@ -13,7 +13,7 @@ public class ImportDogsFromFileTest {
 	
 	@Before
 	public void setUp() {
-		filename = "Data/dogsOffspringtest2.csv";
+		filename = "Data/playforddogsOffSpring.csv";
 	}
 
 	/**
