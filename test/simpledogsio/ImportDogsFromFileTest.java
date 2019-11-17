@@ -13,6 +13,7 @@ public class ImportDogsFromFileTest {
 	
 	@Before
 	public void setUp() {
+		filename = "Data/dogsOffspringtest.csv";
 		filename = "Data/playforddogsOffSpring.csv";
 		//filename = "Data/dogsOffspringtest2.csv";
 
@@ -24,7 +25,9 @@ public class ImportDogsFromFileTest {
 	@Test
 	public void testImportDogsFromCSV() throws Exception {
 		System.out.println("importDogsFromCSV");
-		ImportDogsFromFile.importDogsFromCSV(filename);
+		ImportDogsFromFile myDogImport =  new ImportDogsFromFile();
+		myDogImport.importDogsFromCSV(filename);
+		myDogImport.lookupDogByName2("RUFUS");
 		// TODO review the generated test code and remove the default call to fail.
 		assertTrue(1==1);
 	}

@@ -11549,7 +11549,7 @@ Reference,Colour_Description,Breed_Description,Animal_Name,Gender,Suburb
 153161,Brown/White,British Bulldog,ROSY,Female,SMITHFIELD PLAINS
 153162,Sable/Brown,Pomeranian X,MILO,Desexed Male,ANDREWS FARM
 153165,Tan,Shar Pei,BINDI,Desexed Female,MUNNO PARA
-153166,White,Bulldog,BUDDY,Desexed Male,
+153166,White,Bulldog,BUDDY,Desexed Male,MUNNO PARA
 153167,Blue,Shetland Sheepdog,Izzy,Desexed Female,YATTALUNGA
 153168,Tan,Labrador Retriever X,Darley,Desexed Male,VIRGINIA
 153169,Black,German Shepherd Dog X,Audrey,Desexed Female,VIRGINIA
@@ -14251,7 +14251,6 @@ Reference,Colour_Description,Breed_Description,Animal_Name,Gender,Suburb
 156300,Black/White,Border Collie X,JELLY,Male,HILLBANK
 156301,Black /Tan,German Shepherd Dog,MIG,Desexed Male,ANDREWS FARM
 156302,Black,German Shepherd Dog X,SOPHIE,Male,ANDREWS FARM
-156303,Red,Boxer,ONYX,Male,
 156304,Tan,American Staffordshire Terrier Cross,KARMA,Desexed Female,SMITHFIELD PLAINS
 156305,Black,Jack Russell Terrier,COOKIE,Female,ANDREWS FARM
 156306,Brindle,Deerhound,MILLZ,Male,SMITHFIELD PLAINS
