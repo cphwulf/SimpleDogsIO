@@ -12,8 +12,10 @@ import java.util.Scanner;
  * @author thor
  */
 public class ImportDogsFromFile {
+	MyLList myLList;
 		List ourDogs; 
 		LinkedList<Dog> ourDogsLL; 
+		Node myNode;
 	// Dog(String name, String color, String breed, String name, String gender, String cityOrigin, int Mother, int Father)
 	/*
 	25703,Grey/Tan,Dobermann,E T,Desexed Male,WATERLOO CORNER,NULL,NULL
@@ -21,9 +23,47 @@ public class ImportDogsFromFile {
 	26899,Blenheim,Spaniel,ANDY,Male,HILLIER,NULL,NULL
 	26901,Blenheim,Spaniel,CORKY,Female,HILLIER,NULL,NULL
 	*/
-	public  void importDogsFromCSVToLinkedList(String filename) throws FileNotFoundException {
-		ourDogsLL = new LinkedList<>();
+	public  void importDogsFromCSVToMyLL(String filename) throws FileNotFoundException {
+		myLList = new MyLList();
 		//String filenameOut = "Data/output.sql";
+		File fh = new File(filename);
+		Scanner myScanner = new Scanner(fh);
+		myScanner.nextLine();
+		long startTime = System.currentTimeMillis();
+		while (myScanner.hasNextLine()) {
+			String line = myScanner.nextLine();
+			//String dogLine = String.format(dogFormat, args);
+			String[] myArr = line.split(",");
+			Dog tmpDog = new Dog(Integer.parseInt(myArr[0]),myArr[1],myArr[2],myArr[3],myArr[4],myArr[5]);
+			myLList.add(tmpDog);
+		}
+		long stopTime = System.currentTimeMillis();
+		System.out.println("import to MyOwnLL took " + (stopTime-startTime));
+
+	}
+	public void  lookupDogByNameInMyLL(String name) {
+		long before=System.currentTimeMillis();
+		//myLList.printList();
+		myLList.findInLList("RUFUS");
+		long after=System.currentTimeMillis();
+		long millis=after-before;
+		System.out.println("MyLLL finding RUFUS took " + millis);
+
+	}
+
+	public void  lookupDogByNameInLL(String name) {
+		long startTime = System.currentTimeMillis();
+		for (Dog d:  ourDogsLL) {
+			if (d.getName().equals(name)) {
+				System.out.println("Got dog named " + d);
+			}
+		}
+		long stopTime = System.currentTimeMillis();
+		System.out.println("lookup for  name in  LL took " + (stopTime-startTime));
+	}
+
+	public  void importDogsFromCSVToLinkedList(String filename) throws FileNotFoundException {
+		ourDogsLL = new LinkedList();
 		File fh = new File(filename);
 		Scanner myScanner = new Scanner(fh);
 		myScanner.nextLine();
@@ -39,18 +79,6 @@ public class ImportDogsFromFile {
 		System.out.println("import to LL took " + (stopTime-startTime));
 
 	}
-
-	public void  lookupDogByNameInLL(String name) {
-		long startTime = System.currentTimeMillis();
-		for (Dog d:  ourDogsLL) {
-			if (d.getName().equals(name)) {
-				System.out.println("Got dog named " + d);
-			}
-		}
-		long stopTime = System.currentTimeMillis();
-		System.out.println("lookup for  name in  LL took " + (stopTime-startTime));
-	}
-
 
 	public  void importDogsFromCSV(String filename) throws FileNotFoundException {
 		ourDogs = new ArrayList<>();

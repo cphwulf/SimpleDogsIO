@@ -30,6 +30,8 @@ public class ImportDogsFromFileTest {
 		myDogImport.lookupDogByName2("RUFUS");
 		myDogImport.importDogsFromCSVToLinkedList(filename);
 		myDogImport.lookupDogByNameInLL("Rufus");
+		myDogImport.importDogsFromCSVToMyLL(filename);
+		myDogImport.lookupDogByNameInMyLL("RUFUS");
 		// TODO review the generated test code and remove the default call to fail.
 		assertTrue(1==1);
 	}
