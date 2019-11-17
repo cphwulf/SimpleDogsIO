@@ -28,6 +28,8 @@ public class ImportDogsFromFileTest {
 		ImportDogsFromFile myDogImport =  new ImportDogsFromFile();
 		myDogImport.importDogsFromCSV(filename);
 		myDogImport.lookupDogByName2("RUFUS");
+		myDogImport.importDogsFromCSVToLinkedList(filename);
+		myDogImport.lookupDogByNameInLL("Rufus");
 		// TODO review the generated test code and remove the default call to fail.
 		assertTrue(1==1);
 	}

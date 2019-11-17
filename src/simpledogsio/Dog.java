@@ -50,10 +50,10 @@ public class Dog {
 	public String toString() {
 		String msg = "";
 		msg += "NAME: " + this.dogname;
-		msg += "RACE: " + this.breed;
-		msg += "GENDER: " + this.gender;
-		msg += "COLOR: " + this.color;
-		msg += "TOWN: " + this.cityOrigin;
+		msg += " RACE: " + this.breed;
+		msg += " GENDER: " + this.gender;
+		msg += " COLOR: " + this.color;
+		msg += " TOWN: " + this.cityOrigin;
 		System.out.println(msg);
 
 		return msg;
