@@ -20,6 +20,7 @@ public class MyLList {
 			if (currNode.getData().getName().equals(name)) {
 				System.out.println("Got dog named " + name);
 			}
+			//and now on to the next node
 			currNode = currNode.getNext();
 		}
 	}

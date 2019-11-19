@@ -5,8 +5,8 @@
  */
 package simpledogsio;
 class Node {
-	Dog data;
-	Node next;
+	private Dog data;
+	private Node next;
 
 	Node(Dog d) { 
 		this.data = d;
@@ -15,9 +15,11 @@ class Node {
 	public void setNext(Node next) {
 		this.next = next;
 	}
+
 	public Node getNext() {
 		return this.next;
 	}
+
 	public Dog getData() {
 		return this.data;
 	}
