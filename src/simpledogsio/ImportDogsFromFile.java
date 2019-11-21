@@ -7,6 +7,7 @@ package simpledogsio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -16,7 +17,9 @@ import java.util.Scanner;
 public class ImportDogsFromFile {
 	//Red,Dobermann,AMY,Desexed Female,WATERLOO CORNER
 	// Dog(String name, String gender, String color, String race, String cityOrigin)
-	public static void importDogsFromCSV(String filename, DogCompound dogCompound) {
+	public ArrayList<Dog> importDogsFromCSV(String filename) {
+		ArrayList<Dog> dogs = new ArrayList<>();
+		
 		String line = "";
 		File fh = new File(filename);
 		try {
@@ -24,14 +27,14 @@ public class ImportDogsFromFile {
 			while (myScanner.hasNextLine()) {
 				line = myScanner.nextLine();
 				String[] myArr = line.split(",");
-				Dog tmpDog = new Dog(myArr[3], myArr[4], myArr[1], myArr[2], myArr[5]);
-				dogCompound.addDog(tmpDog);
+				Dog tmpDog = new Dog(Integer.parseInt(myArr[0]), myArr[3], myArr[4], myArr[1], myArr[2], myArr[5]);
+				dogs.add(tmpDog);
 			}
-			dogCompound.showDogs();
 			
 		} catch (Exception e) {
 			System.out.println("error: " + e);
 		}
+		return  dogs;
 	}
 	
 }
